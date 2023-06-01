@@ -1,1 +1,1 @@
-# Đồ án môn nghiệp vụ thông minh - CT255
+# Recognition of license plates by KNN
