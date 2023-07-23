@@ -16,7 +16,7 @@ Max_char = 0.09
 RESIZED_IMAGE_WIDTH = 20
 RESIZED_IMAGE_HEIGHT = 30
 
-img = cv2.imread("data/image/10.jpg")
+img = cv2.imread("data/image/xe1.jpg")
 img = cv2.resize(img, dsize=(1920, 1080))
 
 ###################### If you want to try increasing the contrast #############
