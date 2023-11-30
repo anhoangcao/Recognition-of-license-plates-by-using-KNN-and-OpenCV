@@ -1,5 +1,4 @@
 # Recognition of license plates-by using KNN and openCV
-Check out my 2 YOUTUBE channels for more:
 
 **English below**
 
