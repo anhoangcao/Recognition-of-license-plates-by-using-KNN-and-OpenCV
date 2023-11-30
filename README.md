@@ -80,7 +80,7 @@ The method to rotate the image I use here is:
 * Calculate rotation angle using tan() function 
 * Rotate the image according to the calculated rotation angle. Otherwise, point A is higher than point B, we give negative rotation angle 
 
-<p align="center"><img src="result/chuaxoay.jpg" width="250" >                      <img src="https://i.imgur.com/Am2AKuX.jpg" width="250" ></p>
+<p align="center"><img src="https://i.imgur.com/vWHY086.jpg" width="250" >                      <img src="https://i.imgur.com/Am2AKuX.jpg" width="250" ></p>
 <p align="center"><i>Figure 6. Rotation </i></p>
 
 Từ ảnh nhị phân, ta lại tìm contour cho các kí tự (phần màu trắng). Sau đó vẽ những hình chữ nhật bao quanh các kí tự đó. Tuy nhiên việc tìm contour này cũng bị nhiễu dẫn đến việc máy xử lý sai mà tìm ra những hình ảnh không phải kí tự. Ta sẽ áp dụng các đặc điểm về tỉ lệ chiều cao/rộng của kí tự, diện tích của kí tự so với biển số 
@@ -114,7 +114,7 @@ Because each letter is variable in size, the processing is more difficult, thus 
 Next, we perform the input of the image we are considering and calculate the distances to all points in the sample, the result will be the ASCII code representing that image. Finally, we print out the license plate number.
 
 
-<p align="center"><img src="result/biển 4.JPG" width="250" >                      <img src="https://i.imgur.com/EN4pOa4.jpg" width="250" ></p>
+<p align="center"><img src="https://i.imgur.com/HZsUpdR.jpg" width="250" >                      <img src="https://i.imgur.com/EN4pOa4.jpg" width="250" ></p>
 <p align="center"><i>Figure 8. Print out license plate number </i></p>
 
 ## Nhận dạng kí tự ##
@@ -130,15 +130,10 @@ Khi ta quay theo nhiều góc độ, nhiều vị trí dẫn đến khi tính to
 
 When we rotated from many angles, many positions, leading to the calculation of the area, the high / wide ratio of the number plate no longer met the set conditions, so it was eliminated. The number plate can be affected by external details, so the contour approximation does not produce a quadrilateral, leading to the loss of the number plate. This error especially occurs in cars because cars often have a background around the number plate that is strongly reflective materials, which greatly affects the process of determining the number plate area. 
 
-<p align="center"><img src="result/wrong_plates1.jpg" width="400" >                      <img src="result/wrong_plates2.jpg" width="400" ></p>
-<p align="center"><i>Figure 9. Uncorrect plate extraction </i></p>
 
 Trong quá trình xử lý, việc xử lý nhị phân cũng đóng vai trò quan trọng, ảnh bị nhiễu và bản thân biển số bị tối, dính nhiều bụi dẫn đến khi xử lý nhị phân sẽ bị đứt đoạn và vẻ contour bị sai, để khắc phục cần sử dụng những phép toán hình thái học như phép nở, phép đóng để làm liền những đường màu trắng trong ảnh nhị phân.
 
 The binary processing is also vital in the processing, the image is noisy, and the number plate itself is dark and dusty, causing the binary processing to be halted. If the contour is incorrect, morphological processes such as open and close must be used to recover white lines in binary pictures.
-
-<p align="center"><img src="result/wrong_plates4.jpg.png" width="250" >                      <img src="result/wrong_plates3.jpg" width="250" ></p>
-<p align="center"><i>Figure 10. Error in binary image </i></p>
 
 
 |Category|Nunmber of found plates|100% correctly recognizized	| 1-character uncorrect |	2-character uncorrect	| above 3-character uncorrect |
